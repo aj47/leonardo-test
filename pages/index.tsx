@@ -5,14 +5,14 @@ import {
   CardBody,
   Text,
   Button,
-  Flex,
+  Center,
 } from "@chakra-ui/react";
 import DataVisualiser from "@/components/DataVisualiser";
 
 export default function Home() {
   const { data: session } = useSession();
   return (
-    <Flex alignItems="center" height="100vh" justifyContent="center">
+    <Center>
       <Card align="center" textAlign="center">
         <CardHeader>
           {session ? (
@@ -32,6 +32,6 @@ export default function Home() {
           )}
         </CardBody>
       </Card>
-    </Flex>
+    </Center>
   );
 }

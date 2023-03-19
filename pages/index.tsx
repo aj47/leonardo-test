@@ -16,7 +16,7 @@ export default function Home() {
       <Card align="center" textAlign="center">
         <CardHeader>
           {session ? (
-            <Text>Signed in as {session.user.email} </Text>
+            <Text>Signed in as {session.user?.email} </Text>
           ) : (
             <Text>Sign in to view data</Text>
           )}

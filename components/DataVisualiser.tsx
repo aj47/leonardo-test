@@ -1,5 +1,6 @@
 import { useQuery, gql } from "@apollo/client";
 import { Box } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 
 const COUNTRY_QUERY = gql`
   {
@@ -20,7 +21,7 @@ const COUNTRY_QUERY = gql`
 const DataVisualiser = () => {
   const { data, loading, error } = useQuery(COUNTRY_QUERY);
   console.log(data, "data");
-  if (loading) return "Loading...";
+  if (loading) return <Text>Loading...</Text>;
   if (error) return <pre>{error.message}</pre>;
   const country = data.country;
   return (
